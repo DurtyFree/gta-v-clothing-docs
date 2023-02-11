@@ -2,15 +2,15 @@
 title: Changelogs
 description: All changelogs of Durty Cloth Tool
 published: true
-date: 2023-02-11T18:13:21.497Z
-tags: durtyclothtool, changelog
+date: 2023-02-11T18:28:59.143Z
+tags: changelog, durtyclothtool
 editor: markdown
 dateCreated: 2023-02-11T18:13:21.497Z
 ---
 
 # Durty Cloth Tool v2.5.0
 
-## ??Important Project Migration Note
+## :bookmark_tabs: Important Project Migration Note
 This update changes the way your cloth project is saved and referenced cloth models and textures are managed internally. 
 Due to this change, on first time loading a older project, it will be automatically migrated to the new project format without any needed input from you. As this could take some while, you will be prompted with a dialog to confirm this. 
 
@@ -19,12 +19,12 @@ In this process all your previously added, 'linked', clothes will be copied to a
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-project-migration.gif)](#)
 _Read more "technical information" about the changed project new projects formats in the end of this post._
 
-## ?Update highlights
+## :sparkles: Update highlights
 This is **the biggest cloth tool update** so far, almost one year of work, lots of research and testing went into this. Thanks to every suggestion on this GitHub or my Discord and special thanks to the @Clothes-Experts that decided on helping testing and improving this version.
 
 Lets dive into some of the highlighted features and additions of this new version.
 
-### ?? 3D Previewer
+### :mag: 3D Previewer
 Introducing the 3D Preview Feature. This exciting new feature allows you to **easily visualize and analyze your cloth models and textures** in a whole new dimension. With the Cloth 3D Preview Feature, you can:
 
  - **Preview model and texture combinations with ease**, using the context menu options, the preview button or by simply double clicking any item.
@@ -47,7 +47,7 @@ This feature is an essential tool for anyone looking to bring their models and t
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/3d-preview-rendermode.gif)](#)
 
 
-### ?? Tops with working duffel Bags, Hoodie hairs & Masks that cut or remove hairs 
+### :haircut: Tops with working duffel Bags, Hoodie hairs & Masks that cut or remove hairs 
 This update introduces various new options to **make use of even more GTA V cloth related game mechanics**. Find out more about all new clothing options below.
 
 ### Cut hairs for hoodie clothes (tops & undershirts)
@@ -81,7 +81,7 @@ Previously all vanilla game duffel bags would not work (be invisible) with all y
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-addonjbib_duffelbag_fixed.gif)](#)
 
 
-### ? Tons of automatic error analyzing
+### :exclamation: Tons of automatic error analyzing
 Introducing a new and improved error handling system, you can now **easily identify and fix issues that could potentially break your clothes**, before you build.
 
 With this new feature, you'll be able to:
@@ -97,7 +97,7 @@ Elevate your cloth projects and stay ahead of the game with our new error handli
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-errors-warnings-infos.gif)](#)
 
 
-### ?? Easy optimizing of cloth textures and embedded model textures
+### :zap: Easy optimizing of cloth textures and embedded model textures
 Say goodbye to manual texture optimization and hello to effortless efficiency with this update. The Texture Optimization Feature is here to **revolutionize the way you optimize your textures and models** with ease.
 
 With a range of easily optimizations and edits to apply, including:
@@ -113,7 +113,7 @@ With the Texture Optimization Feature, you can streamline your workflow and focu
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-texture-optimizing.gif)](#)
 
 
-### ?? Drag & Drop
+### :point_right: Drag & Drop
 Making it **easier than ever to import files**. With this new feature, you can:
   - **Effortlessly import files by simply dragging and dropping** them into the tool, whether they're from Windows File Explorer, OpenIV, or CodeWalker.
   - Save time and streamline your workflow by **eliminating the need to manually export & import files** one-by-one.
@@ -123,7 +123,7 @@ Making it **easier than ever to import files**. With this new feature, you can:
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-dragndrop.gif)](#)
 
 
-### ??? Various new import & export formats
+### :open_file_folder: Various new import & export formats
 We're excited to announce a suite of **new import and export file formats that make it easier than ever** to work with clothes.
 
 With this new update, you can:
@@ -135,14 +135,14 @@ With this new update, you can:
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-new-file-formats.gif)](#)
 
 
-### ??? New projects format & file/data handling
+### :floppy_disk: New projects format & file/data handling
 All **files related to a cloth project will be saved & managed in one single folder**, that could easily be shared & does prevent accidentally building files to some unwanted location, deleting hundreds of files in advance (People selected Desktop as output and files got deleted there..).
 
   - Durty Cloth Tool will manage all files added to your project on its own, which **takes you the hassle to manage all imported files on your own** and removes cases where you accidentally deleted a file used in any of your cloth projects, breaking it completely.
   - Files that are added to the project will now be imported to a "data" subfolder of your output folder defined in the build settings
 
 
-### ?? Dynamic config builders
+### :wrench: Dynamic config builders
 The Dynamic Config Builder options are here to **provide you all the configuration files** you need to work with framework plugins like xnTattoos, qb-tattooshop, ESX-TattooShop, or any other similar config files. 
 
 With this powerful new feature, you can:
@@ -156,7 +156,7 @@ With this powerful new feature, you can:
 
 ---
 
-### ?? Technical explaination for new project data keeping
+### :bulb: Technical explaination for new project data keeping
 In previous versions, as soon as you add any drawable or texture file, a reference to this file has been saved. This reference is the full file path leading to the file you have selected. 
 Basically it is not adding the drawable, its just _linking_ to it. This behaviour is not common for applications that look like managing files, like Durty Cloth Tool does. 
 
@@ -175,7 +175,7 @@ This will make managing clothes files a no-brainer as people will not have to pa
 
 People could still setup & manage "raw/source" folders if wanted to keep the original files somewhere, to add from that. Imported / managed files by Durty Cloth Tool will receive cryptic hash names like `936DA01F-9ABD-4D9D-80C7-02AF85C822A8.ydd` as it is not meant to manually delete, edit or replace files in the data folder.
 
-## ??Full Changelog:
+## :scroll: Full Changelog:
 ```markdown
 # Added 3D Previewer
   - Easily 3D preview model & texture combinations using the context menu options, the preview button or double clicking any item
