@@ -2,7 +2,7 @@
 title: Changelogs
 description: All changelogs of Durty Cloth Tool
 published: true
-date: 2023-02-11T18:28:59.143Z
+date: 2023-02-11T18:45:32.197Z
 tags: changelog, durtyclothtool
 editor: markdown
 dateCreated: 2023-02-11T18:13:21.497Z
@@ -175,7 +175,7 @@ This will make managing clothes files a no-brainer as people will not have to pa
 
 People could still setup & manage "raw/source" folders if wanted to keep the original files somewhere, to add from that. Imported / managed files by Durty Cloth Tool will receive cryptic hash names like `936DA01F-9ABD-4D9D-80C7-02AF85C822A8.ydd` as it is not meant to manually delete, edit or replace files in the data folder.
 
-## :scroll: Full Changelog:
+## :scroll: Full Changelog
 ```markdown
 # Added 3D Previewer
   - Easily 3D preview model & texture combinations using the context menu options, the preview button or double clicking any item
@@ -231,3 +231,179 @@ People could still setup & manage "raw/source" folders if wanted to keep the ori
 - Fixed SP cloth packs not working
 - Fixed possible crash cause when using decorations (tattoos) meta
 ```
+
+# Durty Cloth Tool v2.3.1
+## Hotfix / Minor Update for **Version 2.3**
+This update targets some minor issues that have been reported.
+
+*See the initial [v2.3.0 release post](https://github.com/DurtyFree/durty-cloth-tool/releases/tag/2.3) for all information about the 2.3 release*
+```
+- Fixed position data not correctly being loaded from previous save files => overwriting all positions to 0 
+-> Make sure to load a copy of your old save file if you have already overwritten it with the new version
+
+- Fixed newly added tattoos having UvPos & Scale set to null, resulting in a build time exception 
+-> Make sure to always set Uv Pos & Scale + rotation for all your tattoos
+```
+
+# Durty Cloth Tool v2.3.0
+## Important License Note
+**As this update changes the way licenses are generated and processed, you might have to update your HWID with the new one from the tool and update it on the website + download a new license**
+
+*Visit the [Pleb Masters: Forge licenses](https://forge.plebmasters.de/account?tab=licenses) page to update your HWID and redownload your license*
+*Find a detailed article on how to download and use your license [on patreon](https://www.patreon.com/posts/how-to-receive-59448712)*
+
+## Update highlights
+This update contains a lot of fixes that improve the overall experience with the tool and should resolve many of the reported issues I received.
+Besides many small additions, this update also contains some big new additions that I will highlight below.
+
+### Crash fixes, fixes and more fixes
+Thanks to all reports the past weeks, many of the issues that people experienced got fixed with this update. Including many things that possibly caused game crashes.
+Please keep in mind I am not able to fix the crashes and issues caused by loading too many *.YMT files in the latest game DLC / update. This limit has to be increased either bei R* Games themselves on the next updates or by the multiplayer platform of your choice. 
+
+Anyway I have added an option that disables the generation of extra .YMTs that are needed to make high heels, cutting hairs and other stuff possible. Using this can help you shrink down the amount of .YMT files generated, but will make the listed features not work anymore.
+
+[![](https://i.imgur.com/ldSzKFf.png)](#)
+*See [this](https://github.com/DurtyFree/durty-cloth-tool/wiki/YMT-game-limit-and-crash-issues) wiki article for more information regarding the game YMT files limit*
+
+### Addon Tattoos
+This update introduces the first version of being able to easily manage your addon tattoos with the tool. By pressing Add in the tool, you will receive a list of options which now include "Add tattoo". Tattoos can be created from whatever image file you prefer; *.png, *.jpg, *.dds, *.tga, *.bmp or even .ytd files from already existing tattoos. The tool will automatically optimize your tattoo images for the game and create all needed files that are needed. In the game the item Name will represent the tattoo hash / name and the collection name is represented by the name you have gave the collection in the build window.
+
+[![](https://i.imgur.com/0Qj1gdV.png)](#)
+[![](https://i.imgur.com/4PfCC1x.png)](#)
+
+### Item warnings
+From now on you will see possible warnings for your cloth items in form of an exclamation mark directly in front of the related item. This helps finding cause of issues ahead of time faster and more reliable.
+
+[![](https://cdn.discordapp.com/attachments/660140449729740811/931731808771534868/unknown.png)](#)
+[![](https://cdn.discordapp.com/attachments/660140449729740811/931731843693285456/unknown.png)](#)
+
+### Build progress bar & cancel builds
+To improve the cloth building experience I have added a build progress indicator, which will give you detailed information about the current state of build and the possibility to cancel the build at any time. Additionally the application remains responsive at any time.
+
+[![](https://cdn.discordapp.com/attachments/390250138502823937/931336904509628537/trVbgyrULf.gif)](#)
+
+### Cloth physics & Audio presets
+You can now add related *.YLD files for your clothes, which basically describe physics movement for your clothes. 
+Additionally I have added the possibility to the define an audio preset for your clothes. You will be able to select from all the currently existing audio presets for your drawable type of choice. This will for example change the sound of your shoes when you are walking to proper high heel sounds and similar.
+
+[![](https://cdn.discordapp.com/attachments/660140449729740811/932914477685411910/unknown.png)](#)
+[![](https://cdn.discordapp.com/attachments/660140449729740811/932914692614148119/unknown.png)](#)
+
+## :scroll: Full Changelog:
+```markdown
+- Fixed issues with *.ymt files compression (That could lead to game crashes in some cases)
+- Fixed issues with format of creaturemetadata.ymt file (That could lead to game crashes in some cases)
+- Fixed drawable options window buttons sometimes not visible
+- Fixed an edge case with dummy drawables that could cause clothes projects to not work anymore
+- Fixed collection name could be uppercase (should always be lowercase)
+- Fixed mass adding cloth models could fail when theres a variant of some model
+- Fixed possible crash when output directory is still in use on cleanup
+- Fixed last interacted folder sometimes not properly resolved and used on folder / file select dialogs
+- Fixed license HWID related issues
+- Added more license related logging on app startup
+- Added support for mass adding gender specific clothes from multiple folders
+- Added "Has skin tone data" flag support for body / UPPR drawables
+- Added "Cut hairs" flag support for  comp MASK
+- Added warning when drawables don't have any textures
+- Added wiki links for YMT Limit help & New file naming help
+- Added descriptions for all cloth drawable types
+- Added initial support for tattoos (decorations)
+- Added support for numbers in the collection name
+- Added resource build progress bar
+- Added support for cancelling a running build
+- Added option to automatically copy cloth drawable files to sub folders (Named after drawable type)
+- Added item warnings system that will indicate with a exclamation mark in the UI in front of items whether there is some potential issue
+- Added support for enabling comp drawable cloth physics by selecting a *.yld file
+- Added support for comp drawables audio presets that can change shoe walking sounds for example
+- Added option to disable creation of extra .ymt files (With warning that it will disable high heels/ cut hairs flag support)
+- Reworked resource building to run asynchronously and non UI-thread blocking
+- Improved license info window to show license id and more details
+- Improved several license related information
+- Improved build finished information popup
+- Improved build failed handling to properly cleanup resources
+```
+
+# Durty Cloth Tool v2.1.0
+### Hey there, its been some time since the last release of the cloth tool.
+This is the first release of the **next generation premium tool "Durty Cloth Tool"**, which is the best available tool to easily create & manage your GTA 5 addon cloth packs (for singleplayer, FiveM & alt:V) without any knowledge in GTA 5 modding needed.
+It has been rewritten completely from scratch with minimal design changes and a lot of new features. 
+
+**As this required a lot of time, this tool is limited in the free version** of it. Please **consider supporting me on Patreon to get access to a unlimited license**: https://www.patreon.com/plebmasters
+Also visit our new website for this tool: https://gta.clothing
+
+## :scroll: Full Changelog:
+```markdown
+- Completely rewritten core of tool (Improved performance and fixed many bugs)
+- Completely rewritten UI (Fixed a lot of small issues & UI is completely responsive now)
+- Added proper support for creating high heels
+- Added proper support for hats that cut hairs
+- Added proper support for hats that remove hairs completely
+- Fixed various issues that caused some cloth textures to bug or not be visible
+- Fixed singleplayer addon rpf generation
+- Fixed "Unk Flags" options for drawables
+- Fixed auto resolving file names for a lot of cases (Mostly related to EUP and other "replace clothes")
+- Improved auto detection of textures for added cloth drawables in many cases
+- Added options popup whenever options for an added cloth drawable could not be resolved (You can decide its type etc manually or skip items)
+- Added support for adding "dummy / placeholder" drawables & textures that can be used to reserve ids (For future GTA 5 updates or own cloth ### updates)
+- Added button to easily add female & male clothes from a input folder (For example EUP as source), automatically detects gender & other data of replace cloth drawables for example
+- Added button to easily mass add female or male cloth drawables from target folders
+- Added option to automatically skip already added cloth drawables (Detected by same file path)
+- Added various pre-build checks to make sure your cloth build works 100%, if not it will give you proper warnings and how to fix it
+- Added a seperately openable logs window (Click on log text), shows all logs
+- Added a lot more logging in general so generation & actions can be better understand
+- Added support for changing various drawable options after adding it (Comp/Prop & Drawable Type (lowr, accs, jbib etc.))
+- Added support for easily reordering cloth drawables (To change generated drawable id (game id) of output)
+- Added support for easily reordering drawable textures (To change generated variation id (ingame) of output)
+- Added grid splitter between drawables list & edit drawables section, lets user customize the size of regions on its own
+- Introduced new file format that should be smaller (You can select old save files and it will update the format) & Actually saves everything related to your project (Collection & build data too)
+- Added application settings to save various app related things like: Last opened project, Auto cleanup output folder etc.
+```
+
+# Durty Cloth Tool v1.4.1
+## :scroll: Full Changelog:
+```markdown
+- Minor fix for previous version in some case causing black textures?
+```
+
+This version contains some experimental changes related to the texId, please create a Issue if you experience any weird behaviours.
+
+# Durty Cloth Tool v1.4.0
+## :scroll: Full Changelog:
+```markdown
+- Possible fix for Addon masks (Thanks to @Nicoo34)
+- Some minor cleanup
+- Experimental texId related changes
+```
+
+This version contains some experimental changes related to the texId, please create a Issue if you experience any weird behaviours.
+
+# Durty Cloth Tool v1.3.0
+## :scroll: Full Changelog:
+```markdown
+- Possible fix for Addon pants & shoes (Thanks to @MateqB)
+```
+
+# Durty Cloth Tool v1.2.0
+## :scroll: Full Changelog:
+```markdown
+- Various fixes and improvements
+```
+
+# Durty Cloth Tool v1.1.0
+## Full Changelog:
+```markdown
+- Improved some texts and add error dialog for exception during resource building
+- Fixed some naming consistency
+- Fixed after removing item, details still shown
+- Fixed crash with only prop project
+- Added better error / info messages
+```
+
+# Durty Cloth Tool v1.0.0
+## :scroll: Full Changelog:
+```markdown
+- Various fixes
+- A lot of refactoring
+```
+
+Expect things to be broken
