@@ -2,7 +2,7 @@
 title: Changelogs
 description: All changelogs of Durty Cloth Tool
 published: true
-date: 2023-02-11T18:45:32.197Z
+date: 2023-02-11T18:47:07.804Z
 tags: changelog, durtyclothtool
 editor: markdown
 dateCreated: 2023-02-11T18:13:21.497Z
@@ -236,7 +236,7 @@ People could still setup & manage "raw/source" folders if wanted to keep the ori
 ## Hotfix / Minor Update for **Version 2.3**
 This update targets some minor issues that have been reported.
 
-*See the initial [v2.3.0 release post](https://github.com/DurtyFree/durty-cloth-tool/releases/tag/2.3) for all information about the 2.3 release*
+*See the initial [v2.3.0 changelog](https://docs.gta.clothing/en/changelogs#durty-cloth-tool-v230) for all information about the 2.3 release*
 ```
 - Fixed position data not correctly being loaded from previous save files => overwriting all positions to 0 
 -> Make sure to load a copy of your old save file if you have already overwritten it with the new version
