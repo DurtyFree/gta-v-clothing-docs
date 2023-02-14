@@ -2,7 +2,7 @@
 title: Changelogs
 description: All changelogs of Durty Cloth Tool
 published: true
-date: 2023-02-14T16:57:08.653Z
+date: 2023-02-14T16:58:27.230Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-11T18:13:21.497Z
@@ -17,7 +17,7 @@ Due to this change, on first time loading a older project, it will be automatica
 In this process all your previously added, 'linked', clothes will be copied to a by Cloth Tool managed "data" folder.
 
 [![](https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-project-migration.gif)](#)
-_Read more "technical information" about the changed project new projects formats in the end of this post._
+***Read more "technical information" about the changed project new projects formats in the end of this post.***
 
 ## :sparkles: Update highlights
 This is **the biggest cloth tool update** so far, almost one year of work, lots of research and testing went into this. Thanks to every suggestion on this GitHub or my Discord and special thanks to the @Clothes-Experts that decided on helping testing and improving this version.
