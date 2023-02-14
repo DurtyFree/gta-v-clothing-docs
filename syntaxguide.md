@@ -2,7 +2,7 @@
 title: Syntax Guide
 description: Overview of all possible Markdown Syntax in the wiki
 published: true
-date: 2023-02-14T16:46:35.969Z
+date: 2023-02-14T16:47:44.580Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-14T16:46:35.969Z
@@ -155,7 +155,7 @@ This text is separated by a horizontal
 dividing line separated.
 ```
 
-# hyperlinks
+# Hyperlinks
 
 ## Hyperlinks {.tabset}
 
