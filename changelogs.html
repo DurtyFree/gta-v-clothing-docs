@@ -1,0 +1,330 @@
+<!--
+title: Changelogs
+description: All changelogs of Durty Cloth Tool
+published: true
+date: 2023-02-14T11:59:08.369Z
+tags: durtyclothtool, changelog
+editor: ckeditor
+dateCreated: 2023-02-11T18:13:21.497Z
+-->
+
+<h1 class="toc-header" id="durty-cloth-tool-v250"> Durty Cloth Tool v2.5.0</h1>
+<h2 class="toc-header" id="important-project-migration-note"> <img src="/_assets/svg/twemoji/1f4d1.svg" alt="??" draggable="false" class="emoji"> Important Project Migration Note</h2>
+<p>This update changes the way your cloth project is saved and referenced cloth models and textures are managed internally.<br>
+Due to this change, on first time loading a older project, it will be automatically migrated to the new project format without any needed input from you. As this could take some while, you will be prompted with a dialog to confirm this.</p>
+<p>In this process all your previously added, 'linked', clothes will be copied to a by Cloth Tool managed "data" folder.</p>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-project-migration.gif"></a><br>
+<em>Read more "technical information" about the changed project new projects formats in the end of this post.</em></p>
+<h2 class="toc-header" id="update-highlights"> <img src="/_assets/svg/twemoji/2728.svg" alt="?" draggable="false" class="emoji"> Update highlights</h2>
+<p>This is <strong>the biggest cloth tool update</strong> so far, almost one year of work, lots of research and testing went into this. Thanks to every suggestion on this GitHub or my Discord and special thanks to the @Clothes-Experts that decided on helping testing and improving this version.</p>
+<p>Lets dive into some of the highlighted features and additions of this new version.</p>
+<h3 class="toc-header" id="h-3d-previewer"> <img src="/_assets/svg/twemoji/1f50d.svg" alt="??" draggable="false" class="emoji"> 3D Previewer</h3>
+<p>Introducing the 3D Preview Feature. This exciting new feature allows you to <strong>easily visualize and analyze your cloth models and textures</strong> in a whole new dimension. With the Cloth 3D Preview Feature, you can:</p>
+<ul>
+<li><strong>Preview model and texture combinations with ease</strong>, using the context menu options, the preview button or by simply double clicking any item.</li>
+<li>Get a full <strong>preview of your ped models and see cloth models in motion</strong>, allowing you to test whether clothes are correctly rigged.</li>
+<li><strong>Apply animations</strong> to your ped models and see the clothes in motion for an even more comprehensive analysis.</li>
+<li>Benefit from <strong>different render modes</strong> that help you identify any cloth model issues.</li>
+<li>Take advantage of the <strong>wireframe option to see the model structure</strong>, and the ped skeleton option to see the ped bones.</li>
+<li><strong>Switch between different levels of detail (LOD)</strong> to preview the models in a range of resolutions.</li>
+<li><strong>Explore the Models &amp; Texture data</strong> tabs for a more in-depth analysis of your cloth models.</li>
+</ul>
+<p>This feature is an essential tool for anyone looking to bring their models and textures to life and is sure to take your 3D modeling to the next level.</p>
+<h3 class="toc-header" id="example-of-male-clothes-changing-light-direction-switching-thru-different-level-of-details-animating-ped"> Example of male clothes, changing light direction, switching thru different Level of Details &amp; animating ped</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/3d-preview-male-example.gif"></a></p>
+<h3 class="toc-header" id="example-of-female-clothes-animating-showing-grid-wireframe-only-selected-cloth"> Example of female clothes, animating, showing grid, wireframe &amp; only selected cloth</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/3d-preview-female-example.gif"></a></p>
+<h3 class="toc-header" id="example-of-different-rendermodes-allowing-deeper-texturing-insights"> Example of different rendermodes allowing deeper texturing insights</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/3d-preview-rendermode.gif"></a></p>
+<h3 class="toc-header" id="tops-with-working-duffel-bags-hoodie-hairs-masks-that-cut-or-remove-hairs"> <img src="/_assets/svg/twemoji/1f487.svg" alt="??" draggable="false" class="emoji"> Tops with working duffel Bags, Hoodie hairs &amp; Masks that cut or remove hairs</h3>
+<p>This update introduces various new options to <strong>make use of even more GTA V cloth related game mechanics</strong>. Find out more about all new clothing options below.</p>
+<h3 class="toc-header" id="cut-hairs-for-hoodie-clothes-tops-undershirts"> Cut hairs for hoodie clothes (tops &amp; undershirts)</h3>
+<p>Configure whether your <strong>hoodie top / undershirt should cut hairs</strong> to make hoodies not glitch.</p>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/showcase-hoodie-hairs-option.png"></a></p>
+<h3 class="toc-header" id="remove-hat-in-vehicle"> Remove hat in vehicle</h3>
+<p>Set <strong>hats to automatically be removed when the player enters a vehicle</strong> and reapplied when he leaves it again. Making it not glitch thru the vehicle roof.</p>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/showcase-removehatvehicle-option.png"></a></p>
+<h3 class="toc-header" id="without-remove-hat-in-vehicle-option-hat-will-possibly-glitch-thru-roofs"> Without 'Remove hat in vehicle' option, hat will possibly glitch thru roofs</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-removehatinvehicle_flag_off.gif"></a></p>
+<h3 class="toc-header" id="remove-hat-in-vehicle-option-enabled-hat-will-be-unequipped-in-vehicle"> 'Remove hat in vehicle' option enabled, hat will be unequipped in vehicle</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-removehatinvehicle_flag_on.gif"></a></p>
+<h3 class="toc-header" id="cut-or-remove-hairs-for-masks-berds"> Cut or remove hairs for masks (berds)</h3>
+<p>Configure <strong>masks (berds) to automatically cut or remove hairs completely</strong> whenever needed to perfectly fit your masks without glitching hairs.</p>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/showcase-mask-hair-options.png"></a></p>
+<h3 class="toc-header" id="fixed-addon-tops-jbib-vanilla-game-duffel-bags-invisible"> Fixed addon tops (jbib) vanilla game duffel bags invisible</h3>
+<p>Previously all vanilla game duffel bags would not work (be invisible) with all your addon tops (jbibs), this is now <strong>automatically fixed</strong> and will work after regenerating your cloth pack with this new update.</p>
+<h3 class="toc-header" id="previously-unfixed-addon-top-with-duffel-bag-combined"> Previously 'unfixed' addon top with duffel bag combined</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-addonjbib_duffelbag_notfixed.gif"></a></p>
+<h3 class="toc-header" id="now-fixed-addon-top-with-duffel-bag-combined"> Now 'fixed' addon top with duffel bag combined</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-addonjbib_duffelbag_fixed.gif"></a></p>
+<h3 class="toc-header" id="tons-of-automatic-error-analyzing"> <img src="/_assets/svg/twemoji/2757.svg" alt="??" draggable="false" class="emoji"> Tons of automatic error analyzing</h3>
+<p>Introducing a new and improved error handling system, you can now <strong>easily identify and fix issues that could potentially break your clothes</strong>, before you build.</p>
+<p>With this new feature, you'll be able to:</p>
+<ul>
+<li><strong>Quickly categorize issues</strong> as Errors, Warnings, or Informations.</li>
+<li><strong>Identify and fix Errors that could break your clothes</strong>, ensuring that your projects are always in tip-top shape.</li>
+<li>Take advantage of <strong>various Warnings, ranging from missing LOD levels</strong>, invalid model files, missing embedded textures, and more, to improve the quality of your cloth models and textures.</li>
+<li>Receive <strong>Informational hints that provide valuable insights</strong> into your cloth projects.</li>
+</ul>
+<p>Elevate your cloth projects and stay ahead of the game with our new error handling system.</p>
+<h3 class="toc-header" id="example-of-some-information-warnings-errors"> Example of some information, warnings &amp; errors</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-errors-warnings-infos.gif"></a></p>
+<h3 class="toc-header" id="easy-optimizing-of-cloth-textures-and-embedded-model-textures"> <img src="/_assets/svg/twemoji/26a1.svg" alt="??" draggable="false" class="emoji"> Easy optimizing of cloth textures and embedded model textures</h3>
+<p>Say goodbye to manual texture optimization and hello to effortless efficiency with this update. The Texture Optimization Feature is here to <strong>revolutionize the way you optimize your textures and models</strong> with ease.</p>
+<p>With a range of easily optimizations and edits to apply, including:</p>
+<ul>
+<li><strong>Automatic optimization of the compression format</strong> for your textures, ensuring the best quality with the smallest file size, or choose your own compression format to be applied.</li>
+<li><strong>Automatic generation of the suggested amount of mipmap levels</strong> for your texture, providing the perfect balance between quality and performance.</li>
+<li>Seamless adjustments to your textures with the <strong>automatic adjustment to the next power of two</strong> width and height.</li>
+<li><strong>Easy downscaling of your textures</strong> to your preferred size, ensuring that your models look great at any resolution.</li>
+<li>Effortless compatibility with <strong>embedded model textures and cloth texture variations</strong>, without the need for any other tools or manual editing.</li>
+</ul>
+<p>With the Texture Optimization Feature, you can streamline your workflow and focus on creating the best GTA V cloth pack possible.</p>
+<h3 class="toc-header" id="example-of-easily-optimizing-compression-format-mipmaps-power-of-two-more"> Example of easily optimizing compression format, mipmaps, power of two &amp; more</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-texture-optimizing.gif"></a></p>
+<h3 class="toc-header" id="drag-drop"> <img src="/_assets/svg/twemoji/1f449.svg" alt="??" draggable="false" class="emoji"> Drag &amp; Drop</h3>
+<p>Making it <strong>easier than ever to import files</strong>. With this new feature, you can:</p>
+<ul>
+<li><strong>Effortlessly import files by simply dragging and dropping</strong> them into the tool, whether they're from Windows File Explorer, OpenIV, or CodeWalker.</li>
+<li>Save time and streamline your workflow by <strong>eliminating the need to manually export &amp; import files</strong> one-by-one.</li>
+<li>Enjoy a <strong>more user-friendly and intuitive experience adding files</strong> from GTA V file explorers</li>
+</ul>
+<h3 class="toc-header" id="example-of-dragging-and-dropping-files-from-openiv-and-codewalker"> Example of dragging and dropping files from OpenIV and CodeWalker</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-dragndrop.gif"></a></p>
+<h3 class="toc-header" id="various-new-import-export-formats"> <img src="/_assets/svg/twemoji/1f4c2.svg" alt="??" draggable="false" class="emoji"> Various new import &amp; export formats</h3>
+<p>We're excited to announce a suite of <strong>new import and export file formats that make it easier than ever</strong> to work with clothes.</p>
+<p>With this new update, you can:</p>
+<ul>
+<li>Enjoy faster workflows (especially when using Blender) with the <strong>addition of CodeWalker XML import and export support</strong> for cloth drawables and textures.</li>
+<li>Have more flexibility when editing your cloth textures with <strong>new DDS and PNG export options</strong>.</li>
+<li><strong>Quickly add cloth textures straight from a image</strong>, from a variety of image formats including PNG, JPG, TGA, and BMP, which will automatically be converted to YTD.</li>
+</ul>
+<h3 class="toc-header" id="example-of-exporting-to-importing-from-different-new-file-formats-codewalker-xml-png-dds"> Example of exporting to &amp; importing from different new file formats: CodeWalker XML, PNG, DDS</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-new-file-formats.gif"></a></p>
+<h3 class="toc-header" id="new-projects-format-filedata-handling"> <img src="/_assets/svg/twemoji/1f4be.svg" alt="??" draggable="false" class="emoji"> New projects format &amp; file/data handling</h3>
+<p>All <strong>files related to a cloth project will be saved &amp; managed in one single folder</strong>, that could easily be shared &amp; does prevent accidentally building files to some unwanted location, deleting hundreds of files in advance (People selected Desktop as output and files got deleted there..).</p>
+<ul>
+<li>Durty Cloth Tool will manage all files added to your project on its own, which <strong>takes you the hassle to manage all imported files on your own</strong> and removes cases where you accidentally deleted a file used in any of your cloth projects, breaking it completely.</li>
+<li>Files that are added to the project will now be imported to a "data" subfolder of your output folder defined in the build settings</li>
+</ul>
+<h3 class="toc-header" id="dynamic-config-builders"> <img src="/_assets/svg/twemoji/1f527.svg" alt="??" draggable="false" class="emoji"> Dynamic config builders</h3>
+<p>The Dynamic Config Builder options are here to <strong>provide you all the configuration files</strong> you need to work with framework plugins like xnTattoos, qb-tattooshop, ESX-TattooShop, or any other similar config files.</p>
+<p>With this powerful new feature, you can:</p>
+<ul>
+<li><strong>Easily provide example configuration entries</strong> for various framework plugin configurations, making the setup process a breeze.</li>
+<li><strong>Access clothes and tattoos info dumps</strong> filled with valuable information for your developers, such as scripting IDs, types, and names.</li>
+</ul>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/showcase-dynamic-config-builders.png"></a></p>
+<h3 class="toc-header" id="example-of-generating-different-config-files-and-viewing-them-in-visual-studio-code"> Example of generating different config files and viewing them in Visual Studio Code</h3>
+<p><a href="#"><img alt="" src="https://assets.plebmasters.de/durtyclothtool/images/v25/durty-cloth-tool-dynamic-config-builders.gif"></a></p>
+<hr>
+<h3 class="toc-header" id="technical-explaination-for-new-project-data-keeping"> <img src="/_assets/svg/twemoji/1f4a1.svg" alt="??" draggable="false" class="emoji"> Technical explaination for new project data keeping</h3>
+<p>In previous versions, as soon as you add any drawable or texture file, a reference to this file has been saved. This reference is the full file path leading to the file you have selected.<br>
+Basically it is not adding the drawable, its just <em>linking</em> to it. This behaviour is not common for applications that look like managing files, like Durty Cloth Tool does.</p>
+<p><strong>This can and does cause issues like</strong></p>
+<ul>
+<li>moving the whole clothes project file is nearly to impossible if not properly managed on your own</li>
+<li>you will have to take care of managing files properly, because if not done properly you could end up deleting files from your disk that are used in any cloth project</li>
+<li>new people can run into issues like; downloading clothes from the internet, then selecting the drawable file in the downloads folder. When file gets overwritten or deleted in the future, it will just break cloth projects</li>
+</ul>
+<p><strong>It does bring some pros tho</strong></p>
+<ul>
+<li>"Experienced" users that are aware of the possible issues can manage clothes for multiple cloth projects that share the same cloth files (If this is a use case?)</li>
+<li>Possible duplicate of same cloth files on the disk can be prevented (saves some disk space)</li>
+</ul>
+<p>The <strong>change introduced with this version</strong> is that adding a drawable or texture file, will basically import (copy) the file into a by the cloth tool managed "data" folder.<br>
+This will make managing clothes files a no-brainer as people will not have to pay any attention to that anymore. The cloth tool will manage all files in a folder and delete them there if they are unused, while making sure to not delete it instantly (so you could still delete clothes from your project for testing, exit the tool and load the project again and they would be there again.).</p>
+<p>People could still setup &amp; manage "raw/source" folders if wanted to keep the original files somewhere, to add from that. Imported / managed files by Durty Cloth Tool will receive cryptic hash names like <code>936DA01F-9ABD-4D9D-80C7-02AF85C822A8.ydd</code> as it is not meant to manually delete, edit or replace files in the data folder.</p>
+<h2 class="toc-header" id="full-changelog"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown"># Added 3D Previewer
+  - Easily 3D preview model &amp; texture combinations using the context menu options, the preview button or double clicking any item
+  - Full ped preview &amp; cloth model only preview
+  - Apply animations to the ped and see clothes in motion to test whether clothes are correctly rigged
+  - Different render modes that help analyzing cloth model issues
+  - Wireframe option to see model structure
+  - Ped skeleton option to see ped bones 
+  - Level of Detail switch to preview different level of detail (LOD) models of your cloth model
+  - Models &amp; Texture data tabs to get more deep insights
+ 
+# Added new projects format &amp; file handling
+  - Durty Cloth Tool will manage all files added to your project on its own, which takes you the hassle to manage all imported files on your own and removes cases where you accidentally deleted a file used in any of your cloth projects, breaking it completely.
+  - Files that are added to the project will now be imported to a "data" subfolder of your output folder defined in the build settings
+  - Manually editing any files in this directory is not recommended, please use either "Remove" or "Replace" context menu options to edit any files
+  - When first time loading old / previous cloth project, they will automatically be migrated to the new project type
+ 
+# Added tons of error analyzing and features to warn about possible cloth issues
+  - Durty Cloth Tool now treats issues in the category of errors, warnings and informations. Errors will possibly break / make your clothes not work and therefore need to be fixed before build, where as warnings are just personal recommendations to improve any cloth model or texture and informations are just small informational hints.
+  - There are different kinds of warnings now ranging from missing LOD levels, possibly invalid model files, missing embedded textures or textures that are not pow2, too big or have no mip map levels and tons more
+
+# Added easy optimizing of cloth textures and embedded model textures
+  - Automatically optimize compression format to the best choice for the given texture, or select your own compression format to be applied
+  - Automatically generate the suggested amount of mipmap levels for your texture
+  - Automatically adjust textures to the next power of two width &amp; height
+  - Easily downscale textures to the preferred size
+  - Works for embedded model textures &amp; cloth texture variations, magically without the need to edit anything in any other tool
+
+- Added dynamic config builders, easily provide example configuration entries for xnTattoos, qb-tattooshop, ESX-TattooShop or any other similar config files. Also provides clothes &amp; tattoos info dumps that contain all scripting ids &amp; information needed for your developers to work with the new clothes
+- Added options to create complete GTA DLC replace resource, by allowing to assign different male &amp; female cloth collection names or select from a list of GTA 5 dlcs to automatically set the names
+- Added drag &amp; drop support from windows file explorer, OpenIV or CodeWalker, just drag your files into the tool and it will automatically import them
+- Added facial overlays support (beards, makeup, aging, body hair, eyebrows etc), easily add any facial overlay texture and let the Durty Cloth Tool to the rest (very experimental, known to not work as addons... need more investigation)
+- Added warning before trying to exit application when project is not saved, also adds more information to the app title bar
+- Added multi selection support to remove project items or textures
+- Added absolute &amp; relative drawable id generation in the tool, the tool will now automatically calculate the target absolute drawable id (This only works when the cloth pack will be the first or only cloth pack to be loaded)
+- Added context menu for project items &amp; textures, with options to quickly Remove, Replace, Export, Copy Names or 3D preview
+- Added option to customize high heel height, alternatively to the default high heel height value
+- Added option to set custom cut value for hairs, alternatively to the default cut value
+- Added support for RageMp as official target resource type 
+- Added BERD drawable type option to "Remove hat in vehicle", will automatically remove the hat while in vehicle and put on when exiting vehicle
+- Added DEL hotkey for quickly deleting selected items / textures (Confirmation dialog will still open)
+- Added options for masks to cut hairs or remove hairs completely when worn
+- Added option for "Hoodie hairs" on tops (jbibs) and undershirts (accs)
+- Added support for all basegame duffel bags to properly work with addon tops (jbibs), they should not be invisible weared in combination with addon jbibs now
+- Added CodeWalker XML import &amp; export support for cloth drawables + cloth textures, enabling faster workflows when working with Blender
+- Added DDS &amp; PNG export options for cloth textures for more easier editing of your clothes
+- Added support for adding cloth textures from png, jpg, tga &amp; bmp images directly (They get auto converted to YTD)
+- Added various new file formats for importing cloth textures from, like png, jpg, tga &amp; bmp
+- Improved logging overall, previous session logs are now saved, all logs in general provide more information 
+- Improved mass adding from folders (previously taking ages &amp; freezing application), Performance increases, can understand and import much more file naming schemas, will not only search top directory
+- Improved various messages &amp; dialogs like item duplicate &amp; license error dialogs. Buttons should be better understandable now
+- Improved alt:V resources configs, from old .cfg file schema, to new .toml file schema
+- Fixed SP cloth packs not working
+- Fixed possible crash cause when using decorations (tattoos) meta
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v231"> Durty Cloth Tool v2.3.1</h1>
+<h2 class="toc-header" id="hotfix-minor-update-for-version-23"> Hotfix / Minor Update for <strong>Version 2.3</strong></h2>
+<p>This update targets some minor issues that have been reported.</p>
+<p><em>See the initial <a class="is-internal-link is-valid-page" href="/en/changelogs#durty-cloth-tool-v230">v2.3.0 changelog</a> for all information about the 2.3 release</em></p>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-">- Fixed position data not correctly being loaded from previous save files =&gt; overwriting all positions to 0 
+-&gt; Make sure to load a copy of your old save file if you have already overwritten it with the new version
+
+- Fixed newly added tattoos having UvPos &amp; Scale set to null, resulting in a build time exception 
+-&gt; Make sure to always set Uv Pos &amp; Scale + rotation for all your tattoos
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v230"> Durty Cloth Tool v2.3.0</h1>
+<h2 class="toc-header" id="important-license-note"> Important License Note</h2>
+<p><strong>As this update changes the way licenses are generated and processed, you might have to update your HWID with the new one from the tool and update it on the website + download a new license</strong></p>
+<p><em>Visit the <a class="is-external-link" href="https://forge.plebmasters.de/account?tab=licenses">Pleb Masters: Forge licenses</a> page to update your HWID and redownload your license</em><br>
+<em>Find a detailed article on how to download and use your license <a class="is-external-link" href="https://www.patreon.com/posts/how-to-receive-59448712">on patreon</a></em></p>
+<h2 class="toc-header" id="update-highlights-1"> Update highlights</h2>
+<p>This update contains a lot of fixes that improve the overall experience with the tool and should resolve many of the reported issues I received.<br>
+Besides many small additions, this update also contains some big new additions that I will highlight below.</p>
+<h3 class="toc-header" id="crash-fixes-fixes-and-more-fixes"> Crash fixes, fixes and more fixes</h3>
+<p>Thanks to all reports the past weeks, many of the issues that people experienced got fixed with this update. Including many things that possibly caused game crashes.<br>
+Please keep in mind I am not able to fix the crashes and issues caused by loading too many <em>.YMT files in the latest game DLC / update. This limit has to be increased either bei R</em> Games themselves on the next updates or by the multiplayer platform of your choice.</p>
+<p>Anyway I have added an option that disables the generation of extra .YMTs that are needed to make high heels, cutting hairs and other stuff possible. Using this can help you shrink down the amount of .YMT files generated, but will make the listed features not work anymore.</p>
+<p><a href="#"><img alt="" src="https://i.imgur.com/ldSzKFf.png"></a><br>
+<em>See <a class="is-external-link" href="https://github.com/DurtyFree/durty-cloth-tool/wiki/YMT-game-limit-and-crash-issues">this</a> wiki article for more information regarding the game YMT files limit</em></p>
+<h3 class="toc-header" id="addon-tattoos"> Addon Tattoos</h3>
+<p>This update introduces the first version of being able to easily manage your addon tattoos with the tool. By pressing Add in the tool, you will receive a list of options which now include "Add tattoo". Tattoos can be created from whatever image file you prefer; *.png, *.jpg, *.dds, *.tga, *.bmp or even .ytd files from already existing tattoos. The tool will automatically optimize your tattoo images for the game and create all needed files that are needed. In the game the item Name will represent the tattoo hash / name and the collection name is represented by the name you have gave the collection in the build window.</p>
+<p><a href="#"><img alt="" src="https://i.imgur.com/0Qj1gdV.png"></a><br>
+<a href="#"><img alt="" src="https://i.imgur.com/4PfCC1x.png"></a></p>
+<h3 class="toc-header" id="item-warnings"> Item warnings</h3>
+<p>From now on you will see possible warnings for your cloth items in form of an exclamation mark directly in front of the related item. This helps finding cause of issues ahead of time faster and more reliable.</p>
+<p><a href="#"><img alt="" src="https://cdn.discordapp.com/attachments/660140449729740811/931731808771534868/unknown.png"></a><br>
+<a href="#"><img alt="" src="https://cdn.discordapp.com/attachments/660140449729740811/931731843693285456/unknown.png"></a></p>
+<h3 class="toc-header" id="build-progress-bar-cancel-builds"> Build progress bar &amp; cancel builds</h3>
+<p>To improve the cloth building experience I have added a build progress indicator, which will give you detailed information about the current state of build and the possibility to cancel the build at any time. Additionally the application remains responsive at any time.</p>
+<p><a href="#"><img alt="" src="https://cdn.discordapp.com/attachments/390250138502823937/931336904509628537/trVbgyrULf.gif"></a></p>
+<h3 class="toc-header" id="cloth-physics-audio-presets"> Cloth physics &amp; Audio presets</h3>
+<p>You can now add related *.YLD files for your clothes, which basically describe physics movement for your clothes.<br>
+Additionally I have added the possibility to the define an audio preset for your clothes. You will be able to select from all the currently existing audio presets for your drawable type of choice. This will for example change the sound of your shoes when you are walking to proper high heel sounds and similar.</p>
+<p><a href="#"><img alt="" src="https://cdn.discordapp.com/attachments/660140449729740811/932914477685411910/unknown.png"></a><br>
+<a href="#"><img alt="" src="https://cdn.discordapp.com/attachments/660140449729740811/932914692614148119/unknown.png"></a></p>
+<h2 class="toc-header" id="full-changelog-1"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Fixed issues with *.ymt files compression (That could lead to game crashes in some cases)
+- Fixed issues with format of creaturemetadata.ymt file (That could lead to game crashes in some cases)
+- Fixed drawable options window buttons sometimes not visible
+- Fixed an edge case with dummy drawables that could cause clothes projects to not work anymore
+- Fixed collection name could be uppercase (should always be lowercase)
+- Fixed mass adding cloth models could fail when theres a variant of some model
+- Fixed possible crash when output directory is still in use on cleanup
+- Fixed last interacted folder sometimes not properly resolved and used on folder / file select dialogs
+- Fixed license HWID related issues
+- Added more license related logging on app startup
+- Added support for mass adding gender specific clothes from multiple folders
+- Added "Has skin tone data" flag support for body / UPPR drawables
+- Added "Cut hairs" flag support for  comp MASK
+- Added warning when drawables don't have any textures
+- Added wiki links for YMT Limit help &amp; New file naming help
+- Added descriptions for all cloth drawable types
+- Added initial support for tattoos (decorations)
+- Added support for numbers in the collection name
+- Added resource build progress bar
+- Added support for cancelling a running build
+- Added option to automatically copy cloth drawable files to sub folders (Named after drawable type)
+- Added item warnings system that will indicate with a exclamation mark in the UI in front of items whether there is some potential issue
+- Added support for enabling comp drawable cloth physics by selecting a *.yld file
+- Added support for comp drawables audio presets that can change shoe walking sounds for example
+- Added option to disable creation of extra .ymt files (With warning that it will disable high heels/ cut hairs flag support)
+- Reworked resource building to run asynchronously and non UI-thread blocking
+- Improved license info window to show license id and more details
+- Improved several license related information
+- Improved build finished information popup
+- Improved build failed handling to properly cleanup resources
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v210"> Durty Cloth Tool v2.1.0</h1>
+<h3 class="toc-header" id="hey-there-its-been-some-time-since-the-last-release-of-the-cloth-tool"> Hey there, its been some time since the last release of the cloth tool.</h3>
+<p>This is the first release of the <strong>next generation premium tool "Durty Cloth Tool"</strong>, which is the best available tool to easily create &amp; manage your GTA 5 addon cloth packs (for singleplayer, FiveM &amp; alt:V) without any knowledge in GTA 5 modding needed.<br>
+It has been rewritten completely from scratch with minimal design changes and a lot of new features.</p>
+<p><strong>As this required a lot of time, this tool is limited in the free version</strong> of it. Please <strong>consider supporting me on Patreon to get access to a unlimited license</strong>: <a class="is-external-link" href="https://www.patreon.com/plebmasters">https://www.patreon.com/plebmasters</a><br>
+Also visit our new website for this tool: <a class="is-external-link" href="https://gta.clothing">https://gta.clothing</a></p>
+<h2 class="toc-header" id="full-changelog-2"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Completely rewritten core of tool (Improved performance and fixed many bugs)
+- Completely rewritten UI (Fixed a lot of small issues &amp; UI is completely responsive now)
+- Added proper support for creating high heels
+- Added proper support for hats that cut hairs
+- Added proper support for hats that remove hairs completely
+- Fixed various issues that caused some cloth textures to bug or not be visible
+- Fixed singleplayer addon rpf generation
+- Fixed "Unk Flags" options for drawables
+- Fixed auto resolving file names for a lot of cases (Mostly related to EUP and other "replace clothes")
+- Improved auto detection of textures for added cloth drawables in many cases
+- Added options popup whenever options for an added cloth drawable could not be resolved (You can decide its type etc manually or skip items)
+- Added support for adding "dummy / placeholder" drawables &amp; textures that can be used to reserve ids (For future GTA 5 updates or own cloth ### updates)
+- Added button to easily add female &amp; male clothes from a input folder (For example EUP as source), automatically detects gender &amp; other data of replace cloth drawables for example
+- Added button to easily mass add female or male cloth drawables from target folders
+- Added option to automatically skip already added cloth drawables (Detected by same file path)
+- Added various pre-build checks to make sure your cloth build works 100%, if not it will give you proper warnings and how to fix it
+- Added a seperately openable logs window (Click on log text), shows all logs
+- Added a lot more logging in general so generation &amp; actions can be better understand
+- Added support for changing various drawable options after adding it (Comp/Prop &amp; Drawable Type (lowr, accs, jbib etc.))
+- Added support for easily reordering cloth drawables (To change generated drawable id (game id) of output)
+- Added support for easily reordering drawable textures (To change generated variation id (ingame) of output)
+- Added grid splitter between drawables list &amp; edit drawables section, lets user customize the size of regions on its own
+- Introduced new file format that should be smaller (You can select old save files and it will update the format) &amp; Actually saves everything related to your project (Collection &amp; build data too)
+- Added application settings to save various app related things like: Last opened project, Auto cleanup output folder etc.
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v141"> Durty Cloth Tool v1.4.1</h1>
+<h2 class="toc-header" id="full-changelog-3"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Minor fix for previous version in some case causing black textures?
+</code></pre>
+<p>This version contains some experimental changes related to the texId, please create a Issue if you experience any weird behaviours.</p>
+<h1 class="toc-header" id="durty-cloth-tool-v140"> Durty Cloth Tool v1.4.0</h1>
+<h2 class="toc-header" id="full-changelog-4"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Possible fix for Addon masks (Thanks to @Nicoo34)
+- Some minor cleanup
+- Experimental texId related changes
+</code></pre>
+<p>This version contains some experimental changes related to the texId, please create a Issue if you experience any weird behaviours.</p>
+<h1 class="toc-header" id="durty-cloth-tool-v130"> Durty Cloth Tool v1.3.0</h1>
+<h2 class="toc-header" id="full-changelog-5"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Possible fix for Addon pants &amp; shoes (Thanks to @MateqB)
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v120"> Durty Cloth Tool v1.2.0</h1>
+<h2 class="toc-header" id="full-changelog-6"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Various fixes and improvements
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v110"> Durty Cloth Tool v1.1.0</h1>
+<h2 class="toc-header" id="full-changelog-7"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Improved some texts and add error dialog for exception during resource building
+- Fixed some naming consistency
+- Fixed after removing item, details still shown
+- Fixed crash with only prop project
+- Added better error / info messages
+</code></pre>
+<h1 class="toc-header" id="durty-cloth-tool-v100"> Durty Cloth Tool v1.0.0</h1>
+<h2 class="toc-header" id="full-changelog-8"> <img src="/_assets/svg/twemoji/1f4dc.svg" alt="??" draggable="false" class="emoji"> Full Changelog:</h2>
+<pre v-pre="true" class="prismjs line-numbers"><code class="language-markdown">- Various fixes
+- A lot of refactoring
+</code></pre>
+<p>Expect things to be broken</p>
